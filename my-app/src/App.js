@@ -8,7 +8,7 @@ class App extends Component{
     return (
     <div>
       <Header />
-      <Footer />
+      <Footer company="zoommo" email="adobebeta1997@gmail.com"/>
     </div>
   );
 }

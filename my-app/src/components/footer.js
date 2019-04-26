@@ -1,6 +1,6 @@
 import React from 'react'
- const Footer = () => {
-     return <h1>FOOTER</h1>
+ const Footer = (props ) => {
+     return <div>{props.company} {props.email}</div>
  }
 
  export default Footer;
