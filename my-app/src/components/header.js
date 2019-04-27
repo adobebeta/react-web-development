@@ -10,7 +10,22 @@ class Header extends Component{
     constructor(props){
         super(props);
         this.state = {date : new Date()};
-        setInterval(() => this.tick(),1000);
+        console.log("constructor");
+
+    }
+
+    componentDidMount(){
+        this.timer = setInterval(() => this.tick(),1000);
+        console.log("componentDidMount");
+    }
+
+    componentDidUpdate(){
+        console.log("componentDidUpdate");
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.timer);
+        console.log("componentWillUnmount");
     }
 
     tick(){
