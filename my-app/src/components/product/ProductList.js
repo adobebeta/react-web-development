@@ -5,9 +5,10 @@ class ProductList extends Component{
 
     showProduct(){
             return this.props.products && this.props.products.map(product => (
-            // <ProductItem productName = {product.productName} unitPrice = {product.productPrice} />
+                //สองบรรทัดนี้เหมือนกัน
 
-            <ProductItem productName {...product} />
+            // <ProductItem productName = {product.productName} unitPrice = {product.productPrice} />
+            <ProductItem key={product.productID}   {...product} />
             ))
     }
 
