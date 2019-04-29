@@ -9,7 +9,7 @@ import React from 'react'
         <div className="text-center title text-uppercase">
 
         <small>
-        <span className="text-danger">Powered by {props.company}</span> | <span class="text-muted"> Contect {props.email}</span>
+        <span className="text-danger">Powered by {props.company}</span> | <span className="text-muted"> Contect {props.email}</span>
         </small>
         </div>
      </div>

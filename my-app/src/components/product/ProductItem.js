@@ -18,6 +18,10 @@ class ProductItem extends Component{
         console.log("constructor"+props.productName)
     }
     
+    doSomething(productName){
+        console.log(productName);
+    }
+    
     render(){
         const {productName, unitPrice, thumbnail} = this.props;
         return (
@@ -25,7 +29,7 @@ class ProductItem extends Component{
             <img className="img-fluid img-thumbnail" src={thumbnail} />
                 <h5 className="mt-2">{productName}</h5>
                 <p className="title text-right">{unitPrice} THB</p>
-                <button className="btn btn-block btn-secondary title">ซื้อ</button>
+                <button className="btn btn-block btn-secondary title" onClick={() => this.doSomething(productName)}>ซื้อ</button>
             <hr />
             </div>
             

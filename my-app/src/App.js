@@ -28,7 +28,7 @@ class App extends Component{
 
   render() {
     return (
-    <div class="title">  
+    <div className="title">  
       <Header />
       
       <Monitor products = {this.state.products} />

@@ -8,7 +8,7 @@ class ProductList extends Component{
                 //สองบรรทัดนี้เหมือนกัน
 
             // <ProductItem productName = {product.productName} unitPrice = {product.productPrice} />
-            <ProductItem key={product.productID}   {...product} />
+            <ProductItem key = {product.productID}   {...product} />
             ))
     }
 
