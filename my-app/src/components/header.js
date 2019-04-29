@@ -33,9 +33,28 @@ class Header extends Component{
         this.setState({date : new Date()});
     }
 
+    //ตัวนาฬิกา
     render(){
+        const style = {height : 70, marginTop : 10};
+
         return (
-            <div>{this.state.date.toLocaleTimeString()}</div>
+            <div className="container-fluid">
+                <div className="row">
+                    
+                    {/* cloumn left */}
+                    <div className="col-md-8 text-left">
+                        <h1 className="text-success"> <img style={style}  src="/images/logo/logo.png" alt="" /> เฮลตี้คาเฟ่</h1>
+                    </div>
+
+                    {/* column right */}
+                    <div className="col-md-4 text-right">
+                    <h5 className="text-muted mt-4">{this.state.date.toLocaleTimeString()}</h5>
+                    </div>
+                </div>
+                <hr />
+            
+
+            </div>
         )
     }
 }

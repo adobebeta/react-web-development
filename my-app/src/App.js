@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'; 
 import Footer from "./components/footer";
 import Header from './components/header';
 import ProductItem from './components/product/ProductItem';
 
+import './App.css';
 
+//Class components
 class App extends Component{
   render() {
     return (
-    <div>
+    <div class="title">  
       <Header />
       <ProductItem productName = "iphone x" unitPrice="20000"/>
       <ProductItem productName = "ipad pro10.5 x" unitPrice="35000"/>
