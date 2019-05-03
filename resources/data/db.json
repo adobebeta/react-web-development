@@ -145,6 +145,23 @@
         }
       ],
       "id": 6
+    },
+    {
+      "orderDate": "2019-05-03T09:21:26.693Z",
+      "totalPrice": 1180,
+      "orders": [
+        {
+          "product": {
+            "id": 2,
+            "producId": "P002",
+            "productName": "ไก่ทอด",
+            "unitPrice": "90",
+            "thumbnail": "/images/product/2.jpg"
+          },
+          "quantity": 6
+        }
+      ],
+      "id": 7
     }
   ]
 }
