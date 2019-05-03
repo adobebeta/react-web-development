@@ -1,47 +1,133 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "producId": "P001",
-        "productName": "สลัดผัก",
-        "unitPrice": "120",
-        "thumbnail": "/images/product/1.jpg"
-      },
-      {
-        "id": 2,
-        "producId": "P002",
-        "productName": "ไก่ทอด",
-        "unitPrice": "90",
-        "thumbnail": "/images/product/2.jpg"
-      },
-      {
-        "id": 3,
-        "producId": "P003",
-        "productName": "บิงซู",
-        "unitPrice": "250",
-        "thumbnail": "/images/product/3.jpg"
-      },
-      {
-        "id": 4,
-        "producId": "P004",
-        "productName": "เฟรนฟราย",
-        "unitPrice": "120",
-        "thumbnail": "/images/product/4.jpg"
-      },
-      {
-        "id": 5,
-        "producId": "P005",
-        "productName": "เค้ก 3 ชั้น",
-        "unitPrice": "200",
-        "thumbnail": "/images/product/5.jpg"
-      },
-      {
-        "id": 6,
-        "producId": "P006",
-        "productName": "กาแฟ เฮลตี้ฟู้ด",
-        "unitPrice": "140",
-        "thumbnail": "/images/product/6.jpg"
-      }
-    ],
-    "orders": []
-  }
+  "products": [
+    {
+      "id": 1,
+      "producId": "P001",
+      "productName": "สลัดผัก",
+      "unitPrice": "120",
+      "thumbnail": "/images/product/1.jpg"
+    },
+    {
+      "id": 2,
+      "producId": "P002",
+      "productName": "ไก่ทอด",
+      "unitPrice": "90",
+      "thumbnail": "/images/product/2.jpg"
+    },
+    {
+      "id": 3,
+      "producId": "P003",
+      "productName": "บิงซู",
+      "unitPrice": "250",
+      "thumbnail": "/images/product/3.jpg"
+    },
+    {
+      "id": 4,
+      "producId": "P004",
+      "productName": "เฟรนฟราย",
+      "unitPrice": "120",
+      "thumbnail": "/images/product/4.jpg"
+    },
+    {
+      "id": 5,
+      "producId": "P005",
+      "productName": "เค้ก 3 ชั้น",
+      "unitPrice": "200",
+      "thumbnail": "/images/product/5.jpg"
+    },
+    {
+      "id": 6,
+      "producId": "P006",
+      "productName": "กาแฟ เฮลตี้ฟู้ด",
+      "unitPrice": "140",
+      "thumbnail": "/images/product/6.jpg"
+    }
+  ],
+  "orders": [
+    {
+      "orderDate": "2019-05-03T04:57:37.036Z",
+      "totalPrice": 540,
+      "orders": [
+        {
+          "product": {
+            "id": 5,
+            "producId": "P005",
+            "productName": "เค้ก 3 ชั้น",
+            "unitPrice": "200",
+            "thumbnail": "/images/product/5.jpg"
+          },
+          "quantity": 3
+        }
+      ],
+      "id": 1
+    },
+    {
+      "orderDate": "2019-05-03T04:57:59.544Z",
+      "totalPrice": 250,
+      "orders": [
+        {
+          "product": {
+            "id": 3,
+            "producId": "P003",
+            "productName": "บิงซู",
+            "unitPrice": "250",
+            "thumbnail": "/images/product/3.jpg"
+          },
+          "quantity": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "orderDate": "2019-05-03T04:58:10.026Z",
+      "totalPrice": 370,
+      "orders": [
+        {
+          "product": {
+            "id": 3,
+            "producId": "P003",
+            "productName": "บิงซู",
+            "unitPrice": "250",
+            "thumbnail": "/images/product/3.jpg"
+          },
+          "quantity": 2
+        }
+      ],
+      "id": 3
+    },
+    {
+      "orderDate": "2019-05-03T04:58:25.200Z",
+      "totalPrice": 140,
+      "orders": [
+        {
+          "product": {
+            "id": 6,
+            "producId": "P006",
+            "productName": "กาแฟ เฮลตี้ฟู้ด",
+            "unitPrice": "140",
+            "thumbnail": "/images/product/6.jpg"
+          },
+          "quantity": 1
+        }
+      ],
+      "id": 4
+    },
+    {
+      "orderDate": "2019-05-03T04:58:31.196Z",
+      "totalPrice": 280,
+      "orders": [
+        {
+          "product": {
+            "id": 6,
+            "producId": "P006",
+            "productName": "กาแฟ เฮลตี้ฟู้ด",
+            "unitPrice": "140",
+            "thumbnail": "/images/product/6.jpg"
+          },
+          "quantity": 2
+        }
+      ],
+      "id": 5
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import React , { Component} from "react";
 import Calculators from './Calculator';
 import ProductList from '../product/ProductList';
+import Axios from "axios";
 
 class Monitor extends Component{
 
@@ -8,8 +9,9 @@ class Monitor extends Component{
         super(props);
         this.state = {totalPrice: 0 , orders: [] };
         this.addOrders = this.addOrders.bind(this); //ใส่ไว้เพื่อบอกว่าเวลาเรียกให้มันเรียก obj ของตัวนี้เท่านั้น
-        this.delOrder = this.delOrder.bind(this); //ใส่ไว้เพื่อบอกว่าเวลาเรียกให้มันเรียก obj ของตัวนี้เท่านั้น
+        this.delOrder = this.delOrder.bind(this); 
         this.cancelOrder = this.cancelOrder.bind(this);
+        this.confirmOrder = this.confirmOrder.bind(this);
     }
 
     addOrders(product){
@@ -36,6 +38,14 @@ class Monitor extends Component{
         this.setState({totalPrice:totalPrice, orders : resultOrder});
     }
 
+    confirmOrder(){
+        const {totalPrice, orders} = this.state;
+        Axios.post("http://localhost:3001/orders" , { orderDate : new Date , totalPrice, orders})
+        .then( res => {
+            this.setState( {totalPrice : 0, orders : [] })
+        })
+    }
+
     cancelOrder(){
         this.setState( {totalPrice : 0, orders : [] })
     }
@@ -51,7 +61,7 @@ class Monitor extends Component{
                     <div className="col-md-3">
 
                     {/* ให้มันส่งค่า totalPrice , orders ไปให้หน้า Calculator */}
-                        <Calculators totalPrice={this.state.totalPrice} orders={this.state.orders} onDelOrder={this.delOrder}  onCancelOrder={this.cancelOrder} /> 
+                        <Calculators totalPrice={this.state.totalPrice} orders={this.state.orders} onDelOrder={this.delOrder}  onCancelOrder={this.cancelOrder} onConfirmOrder = {this.confirmOrder}/> 
                     </div>
 
                 </div>
