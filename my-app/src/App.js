@@ -2,6 +2,7 @@ import './App.css';
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './containers/Home';
+import About from './containers/About';
 
 class App extends Component {
 
@@ -9,7 +10,9 @@ class App extends Component {
     return (
       <Switch>
         {/* mapระหว่าง URL กับ Component ของมัน */}
-        <Route path="/" component={Home} /> 
+        {/* ต้องเป็น exactเท่านั้น ถึงจะเข้าหน้านี้ได้ */}
+        <Route exact path="/" component={Home} /> 
+        <Route path="/about" component={About} />
       </Switch>
     )
   }
