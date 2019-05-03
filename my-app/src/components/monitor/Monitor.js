@@ -9,7 +9,7 @@ class Monitor extends Component{
         this.state = {totalPrice: 0 , orders: [] };
         this.addOrders = this.addOrders.bind(this); //ใส่ไว้เพื่อบอกว่าเวลาเรียกให้มันเรียก obj ของตัวนี้เท่านั้น
         this.delOrder = this.delOrder.bind(this); //ใส่ไว้เพื่อบอกว่าเวลาเรียกให้มันเรียก obj ของตัวนี้เท่านั้น
-  
+        this.cancelOrder = this.cancelOrder.bind(this);
     }
 
     addOrders(product){
@@ -36,6 +36,10 @@ class Monitor extends Component{
         this.setState({totalPrice:totalPrice, orders : resultOrder});
     }
 
+    cancelOrder(){
+        this.setState( {totalPrice : 0, orders : [] })
+    }
+
 
     render(){
         return(
@@ -47,7 +51,7 @@ class Monitor extends Component{
                     <div className="col-md-3">
 
                     {/* ให้มันส่งค่า totalPrice , orders ไปให้หน้า Calculator */}
-                        <Calculators totalPrice={this.state.totalPrice} orders={this.state.orders} onDelOrder={this.delOrder} /> 
+                        <Calculators totalPrice={this.state.totalPrice} orders={this.state.orders} onDelOrder={this.delOrder}  onCancelOrder={this.cancelOrder} /> 
                     </div>
 
                 </div>
