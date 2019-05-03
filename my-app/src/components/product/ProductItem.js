@@ -29,13 +29,13 @@ class ProductItem extends Component{
             <img className="img-fluid img-thumbnail" src={thumbnail} />
                 <h5 className="mt-2">{productName}</h5>
                 <p className="title text-right">{unitPrice} THB</p>
-                <button className="btn btn-block btn-secondary title" onClick={(e) => this.props.onAddOrder(this.props.product)>
-                ซื้อ</button>
+                <button className="btn btn-block btn-secondary title" onClick={() => this.props.onAddOrder(this.props.product)}>ซื้อ </button>
             <hr />  
             </div>
             
         )
     }
 }
+    
 
 export default ProductItem;

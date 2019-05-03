@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Footer from "./components/footer";
 import Header from './components/header';
 import Monitor from './components/monitor/Monitor';
+
+import Header2 from './components/header2';
 import './App.css';
 
 //Class components
@@ -30,6 +32,7 @@ class App extends Component{
     return (
     <div className="title">  
       <Header />
+      {/* <Header2 /> */}
       
       <Monitor products = {this.state.products} />
 
