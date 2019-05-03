@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './containers/Home';
 import About from './containers/About';
+import Order from './containers/order/Order';
 
 class App extends Component {
 
@@ -13,6 +14,7 @@ class App extends Component {
         {/* ต้องเป็น exactเท่านั้น ถึงจะเข้าหน้านี้ได้ */}
         <Route exact path="/" component={Home} /> 
         <Route path="/about" component={About} />
+        <Route path="/orders" component={Order} />
       </Switch>
     )
   }
