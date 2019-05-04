@@ -4,8 +4,6 @@ import Header from '../components/header';
 import Monitor from '../components/monitor/Monitor';
 import axios from 'axios';
 
-
-//Class components
 class Home extends Component {
 
     constructor(props) {
@@ -26,13 +24,13 @@ class Home extends Component {
         // ]})
 
         // วิธีที่ 2 เรียกใช้ข้อมูลออกมา
-        // fetch("http://localhost:3001/products", { method :"GET"})
+        // fetch("http://localhost:3005", { method :"GET"})
         // .then(res => res.json())
         // .then(res => { this.setState( {products : res})})
         // // .then(res => {console.log(res)})
 
         // วิธีที่ 3 ผ่าน Axios
-        axios.get("http://localhost:3001/products").then(res => {
+        axios.get("http://localhost:3005/products").then(res => {
             console.log(res.data);
             { this.setState({ products: res.data }) }
         });

@@ -10,16 +10,16 @@ class Order extends Component {
     }
 
     componentDidMount() {
-        axios.get("http://localhost:3001/orders")
+        axios.get("http://localhost:3005/orders")
             .then(res => {
                 this.setState({ orders: res.data })
             })
     }
 
     delOrder() {
-        axios.delete("http://localhost:3001/orders" + this.order.id)
+        axios.delete("http://localhost:3005/orders" + this.order.id)
             .then(res => {
-                axios.get("http://localhost:3001/orders")
+                axios.get("http://localhost:3005/orders")
                     .then(res => {
                         this.setState({ order: res.data })
                     }

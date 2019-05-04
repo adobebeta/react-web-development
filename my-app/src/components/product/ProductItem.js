@@ -13,14 +13,10 @@ import React ,{ Component } from "react"
 
 //class component
 class ProductItem extends Component{
-    constructor(props){
-        super(props)
-        console.log("constructor"+props.productName)
-    }
-    
-    doSomething(productName){
-        console.log(productName);
-    }
+    // constructor(props){
+    //     super(props) 
+        
+    // }
     
     render(){
         const {productName, unitPrice, thumbnail} = this.props.product;
